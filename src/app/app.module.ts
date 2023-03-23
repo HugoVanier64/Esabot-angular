@@ -1,18 +1,25 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { HttpClientModule} from '@angular/common/http'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TestComponent } from './test/test.component';
+import { SabotModule } from './sabot/sabot.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    TestComponent
+    
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    SabotModule,
+    HttpClientModule,
+    SabotModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

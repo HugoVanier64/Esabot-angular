@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <section>
+        <header class="header">
+          <div class="row">
+            <div class="col-md-2">
+              <form name="empForm">
+                <table>
+                  <tr>
+                    <th colspan="2">Add sabot</th>
+                  </tr>
+                  <tr>
+                    <td>id</td>
+                    <td><input id="firstName" name="firstName" /></td>
+                  </tr>
+                  <tr>
+                    <td>Etat de batterie :</td>
+                    <td><input id="phoneNo" name="phoneNo" /></td>
+                  </tr>
+                  <tr>
+                    <td>Etat du sabot :</td>
+                    <td><input id="email" name="email" /></td>
+                  </tr>
+                  <tr>
+                    <td colspan="2">
+                      <button
+                        type="button"
+                        (click)="createSabotSLC()"
+                        class="blue-button"
+                      >
+                        Create
+                      </button>
+                    </td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </div>
+        </header>
+      </section>
+      <section class="main">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>First Name</th>
+              <th>Phone No</th>
+              <th>Email</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let sabot of sabots">
+              <th scope="row">{{ sabot.id }}</th>
+              <td>{{ sabot.id }}</td>
+              <td>{{ sabot.etatBatterie }}</td>
+              <td>{{ sabot.etatSabot }}</td>
+              <td>
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  (click)="deleteSabotSLC(sabot)"
+                >
+                  Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </div>
+  </div>
+</div>
